@@ -15,13 +15,15 @@ fig = px.scatter(df,
                 color="Wells")
 fig.show()
 
-def perm_calc(*args):
-    x, a, f, s = args
-    return np.exp(a*x**f-s)
-x = np.linspace(0.01,30,100)
-y = perm_calc( x, 0.01, 2.2, 4.5)
-fig.add_trace(go.Scatter(x=x,
-                        y=y,
-                        mode='lines',
-                        name='function'
-))
+# def perm_calc(*args):
+#     x, a, f, s = args
+#     return np.exp(a*x**f-s)
+# x = np.linspace(0.01,30,100)
+# y = perm_calc( x, 0.01, 2.2, 4.5)
+# fig.add_trace(go.Scatter(x=x,
+#                         y=y,
+#                         mode='lines',
+#                         name='function'
+# ))
+
+# %%
