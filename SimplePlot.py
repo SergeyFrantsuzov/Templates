@@ -6,6 +6,8 @@ import plotly.express as px
 # %%
 df = pd.read_csv('Data.csv', sep=';', header=0)
 # %%
+
+
 fig = px.scatter(df, 
                 x="Porosity", 
                 y="Permeability_Kl",
@@ -13,6 +15,17 @@ fig = px.scatter(df,
                 range_x=[0,30], 
                 range_y=[0.001,10000], 
                 color="Wells")
+
+fig.update_layout(height=600, width=600, 
+                 legend=dict(yanchor="top",y=0.99,xanchor="right", x=0.99))
+fig.update_xaxes(title='AI, kPa*s/m',showline=True, linewidth=2, 
+                 titlefont=dict(size=20),
+                 linecolor='black',range=[7000,11000])
+fig.update_yaxes(title='VPVS',showline=True, linewidth=2, 
+                 titlefont=dict(size=20),
+                 linecolor='black',range=[1.6,2.2])
+
+
 fig.show()
 
 # def perm_calc(*args):
