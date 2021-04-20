@@ -10,8 +10,6 @@ import plotly.graph_objects as go
 df_RP=pd.read_csv('RPResultsForPython.csv', sep=';',header=0)
 
 # %%
-x_line=np.linspace(7000,11000,100)
-y_line=2.43-0.072*x_line*0.001
 
 fig=go.Figure()
 
@@ -35,14 +33,10 @@ fig.add_trace(go.Histogram2dContour(x =df_RP[df_RP["COLL"]==0]['AI_XW'],
                                     contours=dict(coloring="none",
                                                   start=50, end=3000, 
                                                   size=50,showlabels = True)))
-fig.add_trace(go.Scatter(x=x_line, y=y_line,
-                        mode='lines', 
-                        line_color='black',
-                         showlegend=False
-                        ))
 
 fig.update_layout(height=600, width=600, 
-                 legend=dict(yanchor="top",y=0.99,xanchor="right", x=0.99))
+                 legend=dict(yanchor="top",y=0.99,xanchor="right", x=0.99),
+                 template='plotly_white')
 fig.update_xaxes(title='AI, kPa*s/m',showline=True, linewidth=2, 
                  titlefont=dict(size=20),
                  linecolor='black',range=[7000,11000])
