@@ -28,3 +28,7 @@ fig.show()
 # ))
 
 # %%
+fig=go.Figure(data=[(go.Scatter())])
+
+
+fig.show()
