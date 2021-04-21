@@ -8,12 +8,12 @@ df = pd.read_csv('Data_clear.csv', sep=';', header=0)
 
 # %%
 fig = px.scatter(df, 
-                x="Porosity", 
-                y="Permeability_Kl",
+                x="Parameter A", 
+                y="Parameter B",
                 log_y=True,
                 range_x=[0,30], 
                 range_y=[0.001,10000], 
-                color="Wells")
+                color="Classes_1")
 fig.show()
 
 # def perm_calc(*args):
