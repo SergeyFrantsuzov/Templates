@@ -13,4 +13,4 @@ for f in filterDataDict.keys():
 
         df[f]=df[f].replace([str(w)],filterDataDict[f]+str(i))
 # %%
-df.to_csv('Data_clear.csv', index=False, encoding='utf-8', sep=';')
+df.to_csv('Data_clear.csv', index=False, encoding='utf-8-sig', sep=';')

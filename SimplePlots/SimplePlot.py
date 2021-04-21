@@ -4,7 +4,7 @@ import pandas as pd
 import plotly.graph_objects as go
 import plotly.express as px
 # %%
-df = pd.read_csv('Data.csv', sep=';', header=0)
+df = pd.read_csv('Data_clear.csv', sep=';', header=0)
 # %%
 fig = px.scatter(df, 
                 x="Porosity", 
